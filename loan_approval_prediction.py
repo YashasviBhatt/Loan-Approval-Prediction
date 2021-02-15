@@ -130,3 +130,17 @@ plt.show()
 # As we can see that Random Forest Classifier has the best Accuracy Score, therefore we'll use it as the Final Model
 
 #----------------------------------------Model Evaluation----------------------------------------
+
+# Checking on Sample Data
+ds = [
+    ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History', 'Property_Area'],
+    ['Male', 'No', '0', 'Graduate', 'No', 5849, 0, 8000, 360, 1, 'Urban']
+]
+
+ds = pd.DataFrame(ds[1:], columns=ds[0])
+
+for col in col_names[:-1]:
+    if ds[col].dtype == 'O':
+        ds[col] = ds[col].replace(enc[col])
+
+[print('Yes') if clf4.predict(ds)[0] == 0 else print('No')]
