@@ -125,7 +125,7 @@ plt.ylabel('Classifier')
 plt.title('Classifier Performance')
 plt.show()
 
-# As we can see that Random Forest Classifier has the best Accuracy Score, therefore we'll use it as the Final Model
+# As we can see that Random Forest Classifier has best Accuracy Score, therefore we'll use it as the Final Model
 
 #----------------------------------------Model Evaluation----------------------------------------
 
