@@ -27,9 +27,7 @@ col_names.remove('Loan_ID')
 '''
 # Printing all the Columns with Number of Missing Values present
 print('Number of Missing Values per Column')
-for col in col_names:
-    if df[col].isnull().sum() > 0:
-        print(f'{col} : {df[col].isnull().sum()}')
+print(f'{df[col].isnull().sum()}')
 '''
 
 '''
